@@ -1,94 +1,101 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-body{
+body {
   height: 100vh;
-  background: url(bg.jpg) no-repeat center;
+  background: url(bg.jpg);
+  overflow-x: false;
+  overflow-y: false;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.profile-card{
+.profile-card {
   width: 400px;
   text-align: center;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.card-header{
+.card-header {
   background: #2c3a47;
   padding: 60px 40px;
 }
 
-.pic{
+.pic {
   display: inline-block;
-  padding: 8px;
-  background: linear-gradient(130deg, #74b9ff, #e66767);
+  padding: 6px;
+  background: linear-gradient(130deg, #0e70d3, #d40b0b);
   margin: auto;
   border-radius: 50%;
   background-size: 200% 200%;
   animation: animated-gradient 2s linear infinite;
 }
 
-@keyframes animated-gradient{
-  25%{
+@keyframes animated-gradient {
+  25% {
     background-position: left bottom;
   }
-  50%{
+
+  50% {
     background-position: right bottom;
   }
-  75%{
+
+  75% {
     background-position: right top;
   }
-  100%{
+
+  100% {
     background-position: left top;
   }
 }
 
-.pic img{
+.pic img {
   display: block;
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.name{
+.name {
   color: #f2f2f2;
   font-size: 28px;
   font-weight: 600;
   margin: 10px 0;
 }
 
-.desc{
+.desc {
   font-size: 18px;
   color: #e66767;
 }
 
-.sm{
+.sm {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.sm a{
+.sm a {
   color: #f2f2f2;
   width: 56px;
   font-size: 22px;
   transition: .3s linear;
 }
 
-.sm a:hover{
+.sm a:hover {
   color: #e66767;
 }
 
-.contact-btn{
+.contact-btn {
   display: inline-block;
   padding: 12px 50px;
   color: #e66767;
@@ -98,36 +105,152 @@ body{
   transition: .3s linear;
 }
 
-.contact-btn:hover{
+.contact-btn:hover {
   background: #e66767;
   color: #f2f2f2;
 }
 
-.card-footer{
+.card-footer {
   background: #f4f4f4;
   padding: 60px 10px;
 }
 
-.numbers{
+.numbers {
   display: flex;
   align-items: center;
 }
 
-.item{
+.item {
   flex: 1;
   text-transform: uppercase;
   font-size: 13px;
   color: #e66767;
 }
 
-.item span{
+.item span {
   display: block;
   color: #2c3a47;
   font-size: 30px;
 }
 
-.border{
+.border {
   width: 1px;
   height: 30px;
   background: #bbb;
+}
+
+.descFade {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  -webkit-animation: fadein 5s;
+  -o-animation: fadein 5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.nameFade {
+  animation: fadein 4s;
+  -moz-animation: fadein 4s;
+  -webkit-animation: fadein 4s;
+  -o-animation: fadein 4s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.bounceIn {
+  animation-duration: 2s;
+  animation-name: bounceIn;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
